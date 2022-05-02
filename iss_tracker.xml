@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/photo_1616712134411_6b6ae89bc3ba">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="312dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="32dp"
+        android:text="ISS Tracker"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/stopTracking"
+        android:layout_width="142dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#24A60D"
+        android:onClick="StopTracking"
+        android:text="Stop"
+        android:textSize="20sp"
+        app:cornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toEndOf="@+id/startTracking"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/startTracking"
+        android:layout_width="135dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#24A60D"
+        android:onClick="StartTracking"
+        android:text="Start"
+        android:textSize="20sp"
+        app:cornerRadius="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="365dp"
+        android:layout_height="229dp"
+        android:layout_marginTop="28dp"
+        android:text="Press START to begin tracking."
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startTracking"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/worldMap"
+        android:layout_width="361dp"
+        android:layout_height="196dp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/output"
+        app:srcCompat="@drawable/earth_map" />
+
+    <ImageView
+        android:id="@+id/issSymbol"
+        android:layout_width="42dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/satellite_logo"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="388dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
